@@ -77,7 +77,7 @@ public class Job {
                 replyPositionType = '\n' + "Position Type: Data not available";
             }
             if(coreCompetency.toString() == ""){
-                replyCoreCompetency = '\n' + "Core Comppetency: Data not available" + '\n';
+                replyCoreCompetency = '\n' + "Core Competency: Data not available" + '\n';
             }
             reply = replyId + replyName + replyEmployer + replyLocation + replyPositionType + replyCoreCompetency;
         }
