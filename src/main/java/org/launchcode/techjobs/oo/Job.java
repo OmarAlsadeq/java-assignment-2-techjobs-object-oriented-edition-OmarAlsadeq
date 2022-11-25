@@ -18,7 +18,7 @@ public class Job {
         nextId++;
     }
 
-    public Job(){
+    public Job(String name, Employer employer , Location location, PositionType positionType, CoreCompetency coreCompetency){
 
     };
 
