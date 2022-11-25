@@ -42,4 +42,10 @@ public class JobTest {
         assertFalse(job.equals(job2));
     }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        assertEquals(job.toString().charAt(0), '\n');
+        assertEquals(job.toString().charAt(job.toString().length()-1), '\n');
+    }
+
 }

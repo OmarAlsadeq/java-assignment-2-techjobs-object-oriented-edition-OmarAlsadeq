@@ -53,6 +53,38 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String reply = new String();
+        String replyId = new String('\n' + "ID: " + id);
+        String replyName = new String( '\n' + "Name: " + name);
+        String replyEmployer = new String( '\n' + "Employer: " + employer);
+        String replyLocation = new String( '\n' + "Location: " + location);
+        String replyPositionType = new String( '\n' + "Position Type: " + positionType);
+        String replyCoreCompetency = new String( '\n' + "Core Competency: " + coreCompetency + '\n');
+
+        if(employer.toString() == "" && location.toString() == "" && positionType.toString() == "" && coreCompetency.toString() == "") {
+            reply = "OOPS! This job does not seem to exist.";
+        } else {
+
+            if(employer.toString() == ""){
+                replyEmployer = '\n' + "Employer: Data not available";
+            }
+            if(location.toString() == ""){
+                replyLocation = '\n' + "Location: Data not available";
+            }
+            if(positionType.toString() == ""){
+                replyPositionType = '\n' + "Position Type: Data not available";
+            }
+            if(coreCompetency.toString() == ""){
+                replyCoreCompetency = '\n' + "Core Comppetency: Data not available" + '\n';
+            }
+            reply = replyId + replyName + replyEmployer + replyLocation + replyPositionType + replyCoreCompetency;
+        }
+        return reply;
+
+    }
+
     public int getId() {
         return id;
     }
