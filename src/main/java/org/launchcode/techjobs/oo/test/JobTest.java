@@ -63,13 +63,5 @@ public class JobTest {
         assertEquals(job2String, job2.toString());
     }
 
-    /*
-    @Test
-    public void testToStringHandlesJobWithIdOnly() {
-        Job job3 = new Job();
-        String job3String = new String("OOPS! This job does not seem to exist.");
-        assertEquals(job3.toString(), job3String);
-    }
-     */
 
 }
